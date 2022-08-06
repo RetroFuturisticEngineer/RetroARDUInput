@@ -1,4 +1,4 @@
-#General info
+# General info
 
 Install Circuits@Home USB Host Shield Library 2.0 latest release in the library manager to compile the package
 
