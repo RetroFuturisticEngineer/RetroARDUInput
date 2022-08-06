@@ -5,6 +5,8 @@ Requires Circuits@Home USB Host Shield 2.0 Library
 
 Released before getting all components in a 100% working state, as I did not want to wait longer. Due to time limitations, I cannot guarantee to be finished soon with the last details, but by now, you can use all working components already. I will continue development but also encourage the retro computing community to help and contribute in fixing the last PS/2 and ADB issues.
 
+You can find all required files here, the Arduino sketch (RetroArduInput_FW), the case, the PCB and a detailled documentation.
+
 Current status of release:
 
 Input:
