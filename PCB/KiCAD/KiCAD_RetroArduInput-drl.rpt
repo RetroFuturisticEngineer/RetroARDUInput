@@ -1,0 +1,30 @@
+Drill report for C:/Users/Volker/Documents/KiCAD_RetroArduInput/KiCAD_RetroArduInput.kicad_pcb
+Created on 11.04.2021 23:36:22
+
+Copper Layer Stackup:
+    =============================================================
+    L1 :  F.Cu                      front
+    L2 :  B.Cu                      back
+
+
+Drill file 'KiCAD_RetroArduInput-PTH.drl' contains
+    plated through holes:
+    =============================================================
+    T1  0,40mm  0,016"  (2 holes)
+    T2  0,80mm  0,031"  (68 holes)
+    T3  1,00mm  0,039"  (50 holes)  (with 6 slots)
+    T4  1,02mm  0,040"  (80 holes)
+    T5  1,40mm  0,055"  (10 holes)
+    T6  1,60mm  0,063"  (45 holes)
+    T7  2,40mm  0,094"  (2 holes)
+    T8  3,20mm  0,126"  (8 holes)
+
+    Total plated holes count 265
+
+
+Drill file 'KiCAD_RetroArduInput-NPTH.drl' contains
+    unplated through holes:
+    =============================================================
+    T1  3,20mm  0,126"  (9 holes)
+
+    Total unplated holes count 9

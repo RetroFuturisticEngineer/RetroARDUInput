@@ -1,0 +1,91 @@
+
+(rules PCB KiCAD_RetroArduInput
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 144)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.4)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.7)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 50.0 (type smd_smd))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(C1-Pad1)" "Net-(C1-Pad2)" "Net-(C2-Pad2)" "Net-(C2-Pad1)" "Net-(C3-Pad1)" "Net-(C4-Pad2)" "Net-(CN2-Pad1)" "Net-(CN2-Pad2)"
+    "Net-(CN2-Pad3)" "Net-(CN2-Pad4)" "Net-(CN2-Pad6)" "Net-(CN2-Pad7)" "Net-(CN2-Pad8)" "Net-(CN2-Pad9)" "Net-(IC1-Pad10)" "Net-(IC1-Pad7)"
+    GND "Net-(CN5-Pad8)" "Net-(CN5-Pad7)" "Net-(CN5-Pad4)" "Net-(CN5-Pad3)" "Net-(CN5-Pad2)" "Net-(CN5-Pad1)" VCC
+    "Net-(CN0-PadA0)" "Net-(CN0-PadVIN)" "Net-(CN0-Pad3V3)" "Net-(CN0-PadD21)" "Net-(CN0-PadD20)" "Net-(CN0-PadD19)" "Net-(CN0-PadD18)" "Net-(CN0-PadD17)"
+    "Net-(CN0-PadD16)" "Net-(CN0-PadD15)" "Net-(CN0-PadD14)" "Net-(CN0-PadD0)" "Net-(CN0-PadD1)" "Net-(CN0-PadD2)" "Net-(CN0-PadD3)" "Net-(CN0-PadD4)"
+    "Net-(CN0-PadD5)" "Net-(CN0-PadD6)" "Net-(CN0-PadD7)" "Net-(CN0-PadD8)" "Net-(CN0-PadD9)" "Net-(CN0-PadD10)" "Net-(CN0-PadAREF)" "Net-(CN0-PadD13)"
+    "Net-(CN0-PadD12)" "Net-(CN0-PadD11)" "Net-(CN0-PadA1)" "Net-(CN0-PadA2)" "Net-(CN0-PadA3)" "Net-(CN0-PadA4)" "Net-(CN0-PadA5)" "Net-(CN0-PadA8)"
+    "Net-(CN0-PadA9)" "Net-(CN0-PadA10)" "Net-(CN0-PadA11)" "Net-(CN0-PadA12)" "Net-(CN0-PadA13)" "Net-(CN0-PadA14)" "Net-(CN0-PadA15)" "Net-(CN0-PadD22)"
+    "Net-(CN0-PadD23)" "Net-(CN0-PadD24)" "Net-(CN0-PadD25)" "Net-(CN0-PadD26)" "Net-(CN0-PadD27)" "Net-(CN0-PadD28)" "Net-(CN0-PadD29)" "Net-(CN0-PadD30)"
+    "Net-(CN0-PadD31)" "Net-(CN0-PadD32)" "Net-(CN0-PadD33)" "Net-(CN0-PadD34)" "Net-(CN0-PadD35)" "Net-(CN0-PadD36)" "Net-(CN0-PadD37)" "Net-(CN0-PadD38)"
+    "Net-(CN0-PadD39)" "Net-(CN0-PadD40)" "Net-(CN0-PadD41)" "Net-(CN0-PadD42)" "Net-(CN0-PadD43)" "Net-(CN0-PadD44)" "Net-(CN0-PadD45)" "Net-(CN0-PadD46)"
+    "Net-(CN0-PadD47)" "Net-(CN0-PadD48)" "Net-(CN0-PadD49)" "Net-(CN0-PadD50)" "Net-(CN0-PadD51)" "Net-(CN0-PadD52)" "Net-(CN0-PadD53)" "Net-(CN1-Pad1)"
+    "Net-(CN1-Pad3)" "Net-(CN1-Pad6)" "Net-(CN1-Pad8)" "Net-(CN1-Pad9)" "Net-(CN1-Pad11)" "Net-(CN1-Pad13)" "Net-(CN1-Pad15)" "Net-(CN3-Pad7)"
+    "Net-(CN3-Pad5)" "Net-(CN4-Pad7)" "Net-(IC2-Pad15)" "Net-(IC2-Pad13)" "Net-(IC2-Pad11)" "Net-(IC2-Pad3)" "Net-(IC2-Pad2)" "Net-(IC3-Pad2)"
+    "Net-(IC3-Pad3)" "Net-(IC3-Pad11)" "Net-(IC3-Pad13)" "Net-(IC3-Pad15)" "Net-(SW12-Pad3)" "Net-(SW13-Pad3)" "Net-(SW14-Pad3)" "Net-(SW15-Pad3)"
+    "Net-(CN6-Pad2)" "Net-(CN6-Pad6)" "Net-(LED1-Pad2)" "Net-(LED1-Pad1)" "Net-(LED2-Pad1)" "Net-(LED3-Pad1)" "Net-(LED4-Pad1)" "Net-(LED5-Pad1)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
